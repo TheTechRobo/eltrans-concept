@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+
+from tkinter import *
+from subprocess import Popen as r
+
+def passwordGO():
+    global hi, bye
+    bye = hi.get()
+
+eltransGO = Tk()
+Label(eltransGO, text="Please Enter Your Password to install packages").pack()
+hi=Entry(eltransGO, show="*")
+hi.pack()
+Button(eltransGO, text="OK", command=passwordGO).pack()
+r(["echo ", bye, " | sudo -S apui <PutDependenciesHere>"], shell=True)
+
