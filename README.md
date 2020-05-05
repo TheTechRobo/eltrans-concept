@@ -1,2 +1,2 @@
 # eltrans-concept
-Concept for the new, revamped Eltrans
+NOTE: By no means is this finished. DO NOT USE!
