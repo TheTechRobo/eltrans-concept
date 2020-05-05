@@ -7,10 +7,14 @@ eltrans = Tk()
 eltrans.title("Eltrans")
 
 w = Listbox ( eltrans )
-w.insert("1")
-w.insert("2")
-w.insert("3")
- 
-hi = w.curselection()
+w.insert(1, "1")
+w.insert(2, "2")
+w.insert(3, "3")
+w.pack()
+
+def get():
+    global hi
+    hi = w.curselection()
+Button(eltrans, text="OK", command=get).pack()
 
 eltrans.mainloop()
