@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+
+from tkinter import *
+import tkinter
+
+eltrans = Tk()
+eltrans.title("Eltrans")
+
+w = Listbox ( eltrans )
+w.insert("1")
+w.insert("2")
+w.insert("3")
+ 
+hi = w.curselection()
+
+eltrans.mainloop()
