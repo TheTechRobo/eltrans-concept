@@ -5,14 +5,8 @@ from subprocess import Popen as r
 from subprocess import PIPE
 import sys
 
-def passwordGO():
-    global hi, bye
-    bye = hi.get()
-    r(["echo ", bye, " | sudo -S apui <PutDependenciesHere>"], shell=True, stdout=sys.stdout, stderr=sys.stdout)
+Label(eltransGO, text="Installing dependencies...").pack()
+r(["gksu", "apt install <PutDependenciesHere>"], shell=False, stdout=sys.stdout, stderr=sys.stdout)
 eltransGO = Tk()
-Label(eltransGO, text="Please Enter Your Password to install packages").pack()
-hi=Entry(eltransGO, show="*")
-hi.pack()
-Button(eltransGO, text="OK", command=passwordGO).pack()
 
 eltransGO.mainloop()
