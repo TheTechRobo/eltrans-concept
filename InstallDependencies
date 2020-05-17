@@ -2,11 +2,12 @@
 
 from tkinter import *
 from subprocess import Popen as r
-from subprocess import PIPE
+from runpy import run_path as ru
 import sys
 
 Label(eltransGO, text="Installing dependencies...").pack()
 r(["gksu", "apt install <PutDependenciesHere>"], shell=False, stdout=sys.stdout, stderr=sys.stdout)
+ru(path_name="EditPoFile")
 eltransGO = Tk()
 
 eltransGO.mainloop()
