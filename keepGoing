@@ -1,0 +1,5 @@
+#!/usr/bin/python3
+
+from sys import exit as e
+if __name__ == "__main__":
+    e("keepGoing doesn't do anything helpful on its own.")
