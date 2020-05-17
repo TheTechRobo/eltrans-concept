@@ -1,23 +1,27 @@
 #!/usr/bin/python3
 
 from tkinter import *
-import tkinter
 from runpy import run_path as r
 
 eltrans = Tk()
-eltrans.title("Eltrans")
+eltrans.title("Eltrans -- Select a component to translate.")
+Label(eltrans, text="Select a component to translate for Elive.")
 
-w = Listbox ( eltrans )
+w = Listbox(eltrans)
 w.insert(1, "1")
 w.insert(2, "2")
 w.insert(3, "3")
 w.pack()
 
+def keepGoing():
+    print("User selected %s" % hi)
+    r(path_name="keepGoing")
 def get():
     global hi
     hi = w.curselection()
     eltrans.destroy()
-    r(path_name='eltransGO')
+    r(path_name='InstallDependencies')
+    keepGoing()
 Button(eltrans, text="OK", command=get).pack()
 
 eltrans.mainloop()
